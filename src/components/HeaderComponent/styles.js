@@ -9,7 +9,7 @@ export const Header = styled.header`
     color: #fff;
 
     img {
-        width: 7vw;
-        margin: 40px;
+        width: 5vw;
+        margin: 0 40px;
     }
 `

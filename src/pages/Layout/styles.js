@@ -3,8 +3,8 @@ import styled from 'styled-components'
 export const Container = styled.div`
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 8% auto 8%;
-    grid-template-columns: 250px auto auto;
+    grid-template-rows: 5vw auto 5vw;
+    grid-template-columns: auto auto auto;
     grid-template-areas:
     "header header header"
     "content content content"

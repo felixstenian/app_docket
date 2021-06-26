@@ -19,6 +19,9 @@ function Main () {
       <Content>
         <ContentForm>
           <FormComponent>
+            <div>
+              <h1>Adicionar documentos ao pedido</h1>
+            </div>
             <InputComponent
               type='text'
               label='Nome do documento'
