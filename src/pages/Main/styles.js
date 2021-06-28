@@ -6,8 +6,11 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  h2 {
-    /* justify-self: left; */
+  h1 {
+    position: relative;
+    right: 43vw;
+    margin-top: 20px;
+    font-size: 2.3rem;
   }
 `
 

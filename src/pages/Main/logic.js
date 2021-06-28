@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types'
+
 import api from '../../services/api'
+import viacep from '../../services/viacep'
 
 function calcValidateCnpj (numbers, x) {
   const slice = numbers.slice(0, x)
@@ -74,6 +76,23 @@ function validate (data) {
   return { message: '' }
 }
 
+async function checkAddress (
+  cartorioZipCode,
+  setCartorioRoad,
+  setCartorioCity,
+  setCartorioState
+) {
+  const { data } = await viacep.getAddress(cartorioZipCode)
+
+  if (data.error) {
+    return
+  }
+
+  setCartorioRoad(data.logradouro)
+  setCartorioCity(data.localidade)
+  setCartorioState(data.uf)
+}
+
 async function handleRegister (
   body,
   setErrorMessage,
@@ -117,7 +136,7 @@ async function handleRegister (
       setCartorioState('')
       getRequests(setRequests, setLoading)
       setShowToast(true)
-      setLoading(false)
+      // setLoading(false)
     } catch (error) {
       console.log({ error })
     }
@@ -172,9 +191,17 @@ handleDelete.propTypes = {
   setLoading: PropTypes.func
 }
 
+checkAddress.propTypes = {
+  cartorioZipCode: PropTypes.func,
+  setCartorioRoad: PropTypes.func,
+  setCartorioCity: PropTypes.func,
+  setCartorioState: PropTypes.func
+}
+
 export {
   validate,
   handleRegister,
   getRequests,
-  handleDelete
+  handleDelete,
+  checkAddress
 }

@@ -73,6 +73,17 @@ export function Main () {
     logic.getRequests(setRequests, setLoading)
   }, [])
 
+  useEffect(async () => {
+    if (cartorioZipCode.length === 8) {
+      logic.checkAddress(
+        cartorioZipCode,
+        setCartorioRoad,
+        setCartorioCity,
+        setCartorioState
+      )
+    }
+  }, [cartorioZipCode])
+
   return (
     <Container>
       {loading && <Loader />}
@@ -82,7 +93,7 @@ export function Main () {
         setShowToast={setShowToast}
         showToast={showToast}
       />
-      <h2>Pedido #1</h2>
+      <h1>Pedido #1</h1>
       <Header>
         <header>
           <h3>Lead: Documento para criar contato</h3>
