@@ -18,7 +18,7 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
     $ cd app_docket
 
     # Instale as dependências
-    $ yarn pu npm install
+    $ yarn install ou npm install
 
     # Execute o server
     $ json-server --watch db.json --port 3001
