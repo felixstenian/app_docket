@@ -12,5 +12,5 @@ export function FormComponent ({ children }) {
 }
 
 FormComponent.propTypes = {
-  children: PropTypes.element.isRequired
+  children: PropTypes.array.isRequired
 }

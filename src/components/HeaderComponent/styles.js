@@ -1,12 +1,15 @@
 import styled from 'styled-components'
 
+import background from '../../assets/backgroung-header.png'
+
 export const Header = styled.header`
     grid-area: header;
-    /* background-image: linear-gradient(269.83deg, #3a3a3a 27.24%, #fafafa 100%); */
-    background: #3a3a3a;
+    background: url(${background}) no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
     color: #fff;
+    padding: 10px 0;
 
     img {
         width: 5vw;

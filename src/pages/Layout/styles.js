@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    min-height: 100vh;
+    height: 100vh;
     display: grid;
-    grid-template-rows: 5vw auto 5vw;
-    grid-template-columns: auto auto auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 5vw 1fr 5vw;
+
     grid-template-areas:
     "header header header"
     "content content content"
@@ -16,7 +17,6 @@ export const Content = styled.main`
     background: #f3f3f3;
     display:flex;
     flex-direction: column;
-    /* padding: 50px; */
     justify-content: center;
     align-items: center;
 `

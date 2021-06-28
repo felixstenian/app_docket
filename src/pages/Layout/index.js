@@ -11,7 +11,6 @@ export function Layout ({ children }) {
     <Container>
         <HeaderComponent />
         <Content>
-          {/* <HeaderPageComponent /> */}
           {children}
         </Content>
       <FooterComponent />
@@ -20,5 +19,5 @@ export function Layout ({ children }) {
 }
 
 Layout.propTypes = {
-  children: PropTypes.element.isRequired
+  children: PropTypes.array.isRequired
 }

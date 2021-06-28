@@ -1,7 +1,7 @@
 import React from 'react'
 import { Layout } from './pages/Layout'
 
-import Main from './pages/Main'
+import { Main } from './pages/Main'
 
 import GlobalStyles from './styles/global'
 
