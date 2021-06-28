@@ -18,7 +18,6 @@ moment.updateLocale('pt', {
 
 export function LoadDocuments ({ requests, action, showModal, setShowModal }) {
   const [itemSelect, setItemSelect] = useState()
-  console.log(requests)
 
   const handleTrash = (id) => {
     setShowModal(true)
